@@ -6,7 +6,12 @@ import Test.Hspec -- <- DO NOT REMOVE THIS
 -- @output Char
 -- @description: takes a character and returns the next character occuring in alphabetical order
 prob1 :: Char -> Char
-prob1 n = n
+prob1 'Z' = 'A'
+prob1 'z' = 'a'
+prob1 n =
+  if prob2 n /= -1
+    then n
+    else succ n
 -- Function prob2
 -- @type
 -- @param  Char
