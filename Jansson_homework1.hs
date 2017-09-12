@@ -45,8 +45,10 @@ prob3 = undefined
 -- @param  input of type a
 -- @output output of type a
 -- @description:
-prob4 :: a
-prob4 = undefined
+prob4 :: Bool -> a -> a -> a
+prob4 bool a b
+  | bool == True = a
+  | bool == False = b
 -- prob5
 -- @type
 -- @param  Integer
