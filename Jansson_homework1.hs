@@ -45,8 +45,9 @@ prob2 _ = -1
 -- @param  input of type a
 -- @output tuple of type (b, c)
 -- @description:
-prob3 :: a
-prob3 = undefined
+prob3 :: (a -> b) -> (a -> c) -> a -> (b, c)
+prob3 func1 func2 n = (func1 n, func2 n)
+
 -- prob4
 -- @type
 -- @param  Bool
@@ -58,6 +59,7 @@ prob4 :: Bool -> a -> a -> a
 prob4 bool a b
   | bool == True = a
   | bool == False = b
+  
 -- prob5
 -- @type
 -- @param  Integer
