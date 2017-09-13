@@ -44,7 +44,7 @@ prob2 _ = -1
 -- @param  function of type a -> c
 -- @param  input of type a
 -- @output tuple of type (b, c)
--- @description:
+-- @description: Takes two functions and returns the result of both
 prob3 :: (a -> b) -> (a -> c) -> a -> (b, c)
 prob3 func1 func2 n = (func1 n, func2 n)
 
@@ -54,12 +54,12 @@ prob3 func1 func2 n = (func1 n, func2 n)
 -- @param  input of type a
 -- @param  input of type a
 -- @output output of type a
--- @description:
+-- @description: If theBoolisTrue, thesecond argument is returned, otherwise the third argument is returned.
 prob4 :: Bool -> a -> a -> a
 prob4 bool a b
   | bool == True = a
   | bool == False = b
-  
+
 -- prob5
 -- @type
 -- @param  Integer
