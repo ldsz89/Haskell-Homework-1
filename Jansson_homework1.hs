@@ -6,12 +6,21 @@ import Test.Hspec -- <- DO NOT REMOVE THIS
 -- @output Char
 -- @description: takes a character and returns the next character occuring in alphabetical order
 prob1 :: Char -> Char
-prob1 'Z' = 'A'
-prob1 'z' = 'a'
-prob1 n =
-  if prob2 n /= -1
-    then n
-    else succ n
+prob1 n
+  | (n == 'Z') = 'A'
+  | (n == 'z') = 'a'
+  | (n `elem` ['a'..'y'] || n `elem` ['A'..'Y']) = succ n
+  | otherwise = n
+
+{- Old solution: which had a problem where anything that's not a  digit char returned a successor, for example '\\' returned '[' which should be just '\\' -}
+
+-- prob1 'Z' = 'A'
+-- prob1 'z' = 'a'
+-- prob1 n =
+--   if prob2 n /= -1
+--     then n
+--     else succ n
+
 -- Function prob2
 -- @type
 -- @param  Char
