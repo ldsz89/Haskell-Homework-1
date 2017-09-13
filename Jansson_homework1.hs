@@ -44,7 +44,7 @@ prob2 _ = -1
 -- @param  function of type a -> c
 -- @param  input of type a
 -- @output tuple of type (b, c)
--- @description: Takes two functions and returns the result of both
+-- @description: Takes two functions and returns the result of both in a tuple
 prob3 :: (a -> b) -> (a -> c) -> a -> (b, c)
 prob3 func1 func2 n = (func1 n, func2 n)
 
